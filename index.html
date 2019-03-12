@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Currency Exchange</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script type="module" src="Fetcher.js"></script>
+    <script type="module" src="Mapper.js"></script>
+    <script type="module" src="Main.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="divboi"></div>
+      <div class="row z-depth-2">
+        <div class="col s12">
+          <div class="row valign-wrapper">
+            <div class="col s1 center-align">
+              <img
+                id="flag-1"
+                alt=""
+                srcset=""
+                class="flag"
+              />
+            </div>
+            <div class="col s4 input-field">
+              <input type="text" class="autocomplete" id="currency-1" >
+              </input>
+              <label id="input-label-1" for="currency-l">From</label>
+            </div>
+            <div class="col s1">
+              <button
+                id="button-switch"
+                class="btn waves-effect waves-light blue"
+              >
+                <i class="material-icons">compare_arrows</i>
+              </button>
+            </div>
+            <div class="col s4 input-field">
+              <input type="text" id="currency-2" class="autocomplete" />
+              <label id="input-label-2" for="currency-2">To</label>
+            </div>
+            <div class="col s2 center-align">
+              <img id="flag-2" src="" alt="" srcset="" class="flag" />
+            </div>
+          </div>
+        </div>
+        <div class="col s12">
+          <div class="row">
+            <div class="col s1 center-align"></div>
+            <div class="col s4 input-field">
+              <input type="text" id="amount-1" class="" />
+              <label for="amount-1">Amount Sold</label>
+            </div>
+            <div class="col s1"></div>
+            <div class="col s4 input-field">
+              <input disabled type="text" id="amount-2" class="" />
+              <label for="amount-2" id="amount-label">Amount Received</label>
+            </div>
+            <div class="col s2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <script>
+      console.log(document.querySelector("currency-1"));
+    </script> -->
+  </body>
+</html>
