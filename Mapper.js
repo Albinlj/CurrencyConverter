@@ -22,10 +22,14 @@ export async function GetItemsArray() {
       //   console.log(rate);
 
       let currencyName = currencyNames[currencyCode];
-      let url = `https://www.countryflags.io/${currencyCode.substring(
-        0,
-        2
-      )}/flat/48.png`;
+      let flagCode = currencyCode.substring(0, 2);
+      let url = "";
+      if (flagCode[0] != "X") {
+        url = `https://www.countryflags.io/${currencyCode.substring(
+          0,
+          2
+        )}/flat/48.png`;
+      }
       itemArray.push(new Item(currencyCode, currencyName, rate, url));
     }
   }
